@@ -1,0 +1,22 @@
+{
+  "name": "nodejsteam12caapiserver",
+  "version": "1.0.0",
+  "description": "Restful API Server",
+  "main": "sever.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dynamodb"
+  ],
+  "author": "Lim Chang Siang",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.15.1"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.200.0",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
