@@ -1,40 +1,34 @@
-var AWS = require('aws-sdk');
 var quoteListModel = require('../model/quoteListModel');
 
-AWS.config.update({
-    region: "ap-southeast-1",
-    endpoint: "http://dynamodb.ap-southeast-1.amazonaws.com",
-    accessKeyId: "AKIAJFIVNHXZGG2LO4EQ",
-    secretAccessKey: "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"
-  });
-
-
   function list_all_quotes(req, res){
-      console.log(">>> Hits controller")
       quoteListModel.scan()
       .then((response) => {
-          console.log(">>> Controller Promise OK!");
-          res.json(response)
+          //By default, it returns 200 OK
+          res.json(response);
       })
       .catch((error) => {
-          console.log(">>> Controller Promise not OK!");
+          res.status(500);
           res.json(error);
       })
   }
 
-//   function add_new_quote(req, res){
-//       quoteListModel.add
-//       .then((fulfilled) => {
-//           res.json(fulfilled);
-//       })
-//       .catch((error) =>{
-//           res.json(error);
-//       })
-//   }
+  function add_new_quote(req, res){
+    var quote = { name: "HelloWorld", quote: "This is a Test" };
+    quote.name
+      quoteListModel.put(quote)
+      .then((fulfilled) => {
+          res.status(201);
+          res.json({alert: 'New Quote Created Successfully'});
+      })
+      .catch((error) =>{
+          res.status(500);
+          res.json({alert: 'Error from Controller'});
+      })
+  }
 
   module.exports = {
     'scan': list_all_quotes,
-    // add: add_new_quote
+    'put': add_new_quote
 };
 
 
