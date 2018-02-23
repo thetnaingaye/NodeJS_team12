@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <title>
+        Quotes
+    </title>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!--The content below is only a placeholder and can be replaced.-->
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div style="text-align:center">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"> Welcome to Quotable Quotes</a>
+                </div>
+
+            </div>
+        </nav>
+
+        <ul class="nav nav-tabs">
+            <li>
+                <a href="/input">
+                    <strong>WRITE A QUOTE</strong>
+                </a>
+            </li>
+            <li>
+                <a href="/quotes">
+                    <strong>FIND YOUR QUOTE</strong>
+                </a>
+            </li>
+
+        </ul>
+        <h1>Your Everyday Quotes Here!</h1>
+
+
+
+        <form method="post" action='/quotes'>
+            <input type='text' placeholder="Name" name="name">
+            <input type='text' placeholder="Quote..." name="quote">
+            <button type="submit" value="Submit">submit</button>
+        </form>
+
+
+</body>
+
+</html>

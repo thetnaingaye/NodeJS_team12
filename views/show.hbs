@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>My Quotes Page</title>
+    <meta charset="utf-8">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta http-equiv="refresh" content="1" >
+        <!--The content below is only a placeholder and can be replaced.-->
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align:center">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#"> Welcome to Quotable Quotes</a>
+                </div>
+            </div>
+        </nav>
+
+        <ul class="nav nav-tabs">
+            <li>
+                <a href="/input">
+                    <strong>WRITE A QUOTE</strong>
+                </a>
+            </li>
+            <li>
+                <a href="/quotes">
+                    <strong>FIND YOUR QUOTE</strong>
+                </a>
+            </li>
+
+        </ul>
+        <br/>
+
+    <table class="table table-striped" >
+  <thead >
+    <tr>
+      <th scope="col" style="text-align: left">Name</th>
+      <th scope="col" style="text-align: left">Quote</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each quotes}}
+    <tr>
+      <td style="text-align: left">{{name}}</td>
+      <td style="text-align: left">{{quote}}</td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>
+</body>
+
+</html>
