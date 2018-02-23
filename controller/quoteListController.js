@@ -32,23 +32,6 @@ function retrieve_quotes() {
 }
 retrieve_quotes();
 
-
-//   function list_all_quotes(req, res){
-
-//       quoteListModel.scan()
-//       .then((response) => {
-//           //By default, it returns 200 OK
-//           //res.json(response);
-//         //   console.log(response);
-
-//          res.render('show.hbs', {quotes: response.Items})
-//       })
-//       .catch((error) => {
-//           res.status(500);
-//           res.json(error);
-//       })
-//   }
-
   // Passing data to the client's machine (aka browser)
 function list_all_quotes(req, res) {
     if (this.data != null) {
