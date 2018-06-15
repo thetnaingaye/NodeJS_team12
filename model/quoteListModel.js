@@ -11,8 +11,8 @@ AWS.config.update({
     region: "ap-southeast-1",
     endpoint: "http://dynamodb.ap-southeast-1.amazonaws.com",
     /* Comment out the 'accessKeyId', 'secretAccessKey' */
-    accessKeyId: "AKIAJFIVNHXZGG2LO4EQ",
-    secretAccessKey: "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"
+    accessKeyId: "remove accessKeyId",
+    secretAccessKey: "remove secret access key"
 });
 
 var docClient = new AWS.DynamoDB.DocumentClient();
